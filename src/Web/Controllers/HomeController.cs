@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Core.Messaging;
 
-namespace Web.Controllers
+namespace web.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
+        private readonly IServiceBus _bus;
+
+        public HomeController(IServiceBus bus)
         {
-            
+            _bus = bus;
         }
+
         public ActionResult Index()
         {
-
             ViewBag.Title = "Home Page";
-
-
 
             return View();
         }

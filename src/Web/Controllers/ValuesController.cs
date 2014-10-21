@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using Core.Messaging;
 
-namespace Web.Controllers
+namespace web.Controllers
 {
-    [Authorize]
+    [RoutePrefix("api/Values")]
     public class ValuesController : ApiController
     {
+        private readonly IServiceBus _bus;
+
+        public ValuesController(IServiceBus bus)
+        {
+            _bus = bus;
+        }
+
         // GET api/values
+        [Route("")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
+        [Route("{id:int}")]
         public string Get(int id)
         {
             return "value";
@@ -28,11 +34,13 @@ namespace Web.Controllers
         }
 
         // PUT api/values/5
+        [Route("{id:int}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
         // DELETE api/values/5
+        [Route("{id:int}")]
         public void Delete(int id)
         {
         }

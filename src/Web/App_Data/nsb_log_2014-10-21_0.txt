@@ -1,0 +1,6 @@
+﻿2014-10-21 16:26:59.700 INFO  DefaultFactory Logging to 'C:\Projects\Personal\IntroToCQRS\src\web\App_Data\' with level Info
+2014-10-21 16:26:59.782 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'NHibernatePersistence' to provide storage for 'GatewayDeduplication' storage.
+2014-10-21 16:26:59.787 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'NHibernatePersistence' to provide storage for 'Timeouts' storage.
+2014-10-21 16:26:59.791 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'NHibernatePersistence' to provide storage for 'Sagas' storage.
+2014-10-21 16:26:59.794 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'NHibernatePersistence' to provide storage for 'Subscriptions' storage.
+2014-10-21 16:26:59.797 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'NHibernatePersistence' to provide storage for 'Outbox' storage.

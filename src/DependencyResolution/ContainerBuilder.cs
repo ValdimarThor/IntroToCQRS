@@ -1,4 +1,4 @@
-﻿using DependencyResolution.Core;
+﻿using DependencyResolution.Messaging;
 using StructureMap;
 
 namespace DependencyResolution
@@ -7,11 +7,10 @@ namespace DependencyResolution
     {
         public static IContainer Build()
         {
-            ObjectFactory.Initialize(x => {
-                x.AddRegistry<MarketingRegistry>();
-                x.AddRegistry<OrdersRegistry>();
+            ObjectFactory.Initialize(x =>
+            {
+                x.AddRegistry<MessagingRegistry>();
             });
-
             return ObjectFactory.Container;
         }
     }
